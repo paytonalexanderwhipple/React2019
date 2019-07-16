@@ -9,7 +9,7 @@ export default () => {
 
 	return (
 		<div className='directory-menu'>
-			{sections.map((section) => <MenuItem key={section.id} size={section.size} imageUrl={section.imageUrl} title={section.title} />)}
+			{sections.map(({ id, ...sectionProps }) => <MenuItem key={id} {...sectionProps} />)}
 		</div>
 	)
 
